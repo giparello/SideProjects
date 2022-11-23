@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="6c8d6678-13e5-43c3-96cb-e7a8d9b341e4" name="Changes" comment="" />
+=======
+    <list default="true" id="fcabd5e7-2aee-4a98-947b-a7982e6ae9cc" name="Changes" comment="" />
+>>>>>>> 52fa306e16b23009f786278d3b2fb6690a570181
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="2Gzdn7OW3Nb1kec2USX072CncMQ" />
+=======
+  <component name="ProjectId" id="2GzdsMrOYsAhmKMWErxgEllbeC5" />
+>>>>>>> 52fa306e16b23009f786278d3b2fb6690a570181
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tenmo-client" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> 52fa306e16b23009f786278d3b2fb6690a570181
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
+      <changelist id="6c8d6678-13e5-43c3-96cb-e7a8d9b341e4" name="Changes" comment="" />
+      <created>1667395509980</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667395509980</updated>
+=======
+      <changelist id="fcabd5e7-2aee-4a98-947b-a7982e6ae9cc" name="Changes" comment="" />
+      <created>1667395551265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667395551265</updated>
+>>>>>>> 52fa306e16b23009f786278d3b2fb6690a570181
+    </task>
+    <servers />
+  </component>
+</project>

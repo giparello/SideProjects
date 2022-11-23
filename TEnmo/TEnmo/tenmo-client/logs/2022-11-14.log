@@ -1,0 +1,4 @@
+2022-11-14T21:55:20.9852859 401 : [no body]
+2022-11-14T22:04:41.0447832 405 : [{"timestamp":"2022-11-15T03:04:41.031+00:00","status":405,"error":"Method Not Allowed","message":"Request method 'GET' not supported","path":"/transfer"}]
+2022-11-14T22:30:28.2540631 404 : [{"timestamp":"2022-11-15T03:30:28.236+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer3023"}]
+2022-11-14T22:30:58.8496031 404 : [{"timestamp":"2022-11-15T03:30:58.847+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer3023"}]

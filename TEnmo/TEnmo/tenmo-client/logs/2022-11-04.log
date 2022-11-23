@@ -1,0 +1,15 @@
+<<<<<<< HEAD
+2022-11-04T10:29:55.8369755 500 : [{"timestamp":"2022-11-04T14:29:55.821+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; SQL [INSERT INTO tenmo_user (username, password_hash) VALUES (?, ?) RETU... (528 bytes)]
+2022-11-04T10:30:58.1728288 500 : [{"timestamp":"2022-11-04T14:30:58.133+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; SQL [INSERT INTO tenmo_user (username, password_hash) VALUES (?, ?) RETU... (528 bytes)]
+=======
+2022-11-04T09:23:49.87244 500 : [{"timestamp":"2022-11-04T13:23:49.854+00:00","status":500,"error":"Internal Server Error","message":"PreparedStatementCallback; SQL [INSERT INTO tenmo_user (username, password_hash) VALUES (?, ?) RETU... (534 bytes)]
+2022-11-04T10:26:16.7312242 I/O error on POST request for "http://localhost:8080/register": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-04T10:26:27.7770271 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+<<<<<<< HEAD
+2022-11-04T10:31:05.4409272 401 : [no body]
+=======
+>>>>>>> 856b15661299bef364db794770c69b8fe57c6eca
+>>>>>>> 35a5e566e47df7923ca2ce4508d0c8afc3215181
+2022-11-04T16:39:12.2520595 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-04T18:25:34.3386048 404 : [{"timestamp":"2022-11-04T22:25:34.322+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]
+2022-11-04T18:26:22.1578604 404 : [{"timestamp":"2022-11-04T22:26:22.146+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]

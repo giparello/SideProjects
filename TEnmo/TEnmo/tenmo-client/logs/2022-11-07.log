@@ -1,0 +1,37 @@
+<<<<<<< HEAD
+2022-11-07T08:08:09.1249336 401 : [no body]
+2022-11-07T08:08:15.8491971 401 : [no body]
+=======
+2022-11-07T10:01:20.7203827 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T10:01:29.5469385 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T10:01:36.2166238 I/O error on POST request for "http://localhost:8080/register": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T10:02:59.8839561 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T10:13:57.3185045 404 : [{"timestamp":"2022-11-07T15:13:57.301+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]
+<<<<<<< HEAD
+2022-11-07T10:42:07.4909553 404 : [{"timestamp":"2022-11-07T15:42:07.476+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]
+2022-11-07T11:49:34.1949245 500 : [{"timestamp":"2022-11-07T16:49:34.179+00:00","status":500,"error":"Internal Server Error","message":"Ambiguous handler methods mapped for '/account/1001': {public java.math.BigDecimal com.techelevator.tenmo.controller.AccountController.getAccountBalance(int), public com.techelevator.tenmo.model.Account com.techelevator.tenmo.controller.AccountController.getAccount(int)}","path":"/account/1001"}]
+=======
+>>>>>>> d333728e334c41337cb86b25f98e5ae77cdcff01
+<<<<<<< HEAD
+2022-11-07T10:58:46.3050384 401 : [no body]
+=======
+>>>>>>> 9d2da810a2b7a1f1b1527753fdc48cc7fac07eca
+>>>>>>> 680ba086252786a6e19108544f597977bf6c9c44
+2022-11-07T12:49:49.3459891 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T12:50:47.6943578 404 : [{"timestamp":"2022-11-07T17:50:47.694+00:00","status":404,"error":"Not Found","message":"No message available","path":"/account"}]
+2022-11-07T12:51:24.9093501 404 : [{"timestamp":"2022-11-07T17:51:24.893+00:00","status":404,"error":"Not Found","message":"No message available","path":"/account"}]
+2022-11-07T13:08:59.2885464 404 : [{"timestamp":"2022-11-07T18:08:59.272+00:00","status":404,"error":"Not Found","message":"No message available","path":"/user1007"}]
+2022-11-07T13:09:21.1733492 401 : [{"timestamp":"2022-11-07T18:09:21.157+00:00","status":401,"error":"Unauthorized","message":"User gianni was not found.","path":"/user/1007"}]
+2022-11-07T13:22:21.568091 401 : [{"timestamp":"2022-11-07T18:22:21.539+00:00","status":401,"error":"Unauthorized","message":"User gianni was not found.","path":"/user/1007"}]
+2022-11-07T13:24:19.9226127 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+2022-11-07T13:25:13.97529 400 : [{"timestamp":"2022-11-07T18:25:13.962+00:00","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: \"user\"","path":"/account/user/"}]
+2022-11-07T13:31:23.6857897 400 : [{"timestamp":"2022-11-07T18:31:23.619+00:00","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: \"user\"","path":"/account/user/"}]
+2022-11-07T13:39:04.471836 400 : [{"timestamp":"2022-11-07T18:39:04.445+00:00","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: \"user\"","path":"/account/user/"}]
+2022-11-07T13:40:27.6454511 400 : [{"timestamp":"2022-11-07T18:40:27.604+00:00","status":400,"error":"Bad Request","message":"Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: \"user\"","path":"/account/user/"}]
+2022-11-07T13:54:41.4636363 401 : [no body]
+2022-11-07T16:13:05.9772594 404 : [{"timestamp":"2022-11-07T21:13:05.962+00:00","status":404,"error":"Not Found","message":"No message available","path":"/"}]
+2022-11-07T16:16:39.8764942 404 : [{"timestamp":"2022-11-07T21:16:39.864+00:00","status":404,"error":"Not Found","message":"No message available","path":"/"}]
+2022-11-07T16:17:50.7474796 404 : [{"timestamp":"2022-11-07T21:17:50.733+00:00","status":404,"error":"Not Found","message":"No message available","path":"/"}]
+2022-11-07T16:18:29.4185858 404 : [{"timestamp":"2022-11-07T21:18:29.404+00:00","status":404,"error":"Not Found","message":"No message available","path":"/"}]
+2022-11-07T16:18:29.4363647 400 : [{"timestamp":"2022-11-07T21:18:29.434+00:00","status":400,"error":"Bad Request","message":"400 BAD_REQUEST","path":"/account/0"}]
+2022-11-07T16:19:24.5703564 404 : [{"timestamp":"2022-11-07T21:19:24.559+00:00","status":404,"error":"Not Found","message":"No message available","path":"/"}]

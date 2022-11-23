@@ -1,0 +1,10 @@
+<<<<<<< HEAD
+2022-11-06T07:47:35.0141105 401 : [no body]
+2022-11-06T07:47:51.4922781 404 : [{"timestamp":"2022-11-06T12:47:51.492+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]
+=======
+2022-11-06T23:46:32.6185309 I/O error on POST request for "http://localhost:8080/login": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+<<<<<<< HEAD
+2022-11-06T23:46:54.2162365 404 : [{"timestamp":"2022-11-07T04:46:54.199+00:00","status":404,"error":"Not Found","message":"No message available","path":"/transfer"}]
+=======
+>>>>>>> 1854aa31d43074bd95364bf4e943f1b0b36b736c
+>>>>>>> 24a58b4d1142957360e7b9ca5c4ea8a045327bd6
