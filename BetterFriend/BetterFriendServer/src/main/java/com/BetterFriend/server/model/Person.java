@@ -12,6 +12,10 @@ public class Person {
     Date lastTimeCalled;
     Date birthDay;
 
+    public Person(){
+
+    };
+
     public Person(int friendId, int userId, String lastName, String firstName, int phoneNumber, String city,Date lastTimeCalled, Date birthDay){
         this.friendId = friendId;
         this.userId = userId;
