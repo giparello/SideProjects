@@ -23,9 +23,9 @@ public interface PersonDao {
 
     List<Person> getAllPeopleByLastName(String lastName);
 
-    void addPerson(String firstName, String lastName, int phoneNumber, String city, Date lastTimeCalled, Date birthDate);
+    Person addPerson(Person person);
 
-    void updatePerson(String firstName, String lastName, int phoneNumber, String city, Date lastTimeCalled, Date birthDate);
+    boolean updatePerson(int friendId, Person person);
 
-    void deletePerson(int PersonId);
+    void deletePerson(int friendId);
 }

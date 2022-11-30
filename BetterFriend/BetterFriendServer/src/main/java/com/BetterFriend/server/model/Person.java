@@ -4,27 +4,35 @@ import java.util.Date;
 
 public class Person {
     int friendId;
-    int userId;
     String lastName;
     String firstName;
     int phoneNumber;
     String city;
     Date lastTimeCalled;
     Date birthDay;
+    String lifeEvents;
 
     public Person(){
 
     };
 
-    public Person(int friendId, int userId, String lastName, String firstName, int phoneNumber, String city,Date lastTimeCalled, Date birthDay){
+    public Person(int friendId, String lastName, String firstName, int phoneNumber, String city,Date lastTimeCalled, Date birthDay, String lifeEvents){
         this.friendId = friendId;
-        this.userId = userId;
         this.lastName = lastName;
         this.firstName = firstName;
         this.phoneNumber = phoneNumber;
         this.city = city;
         this.lastTimeCalled = lastTimeCalled;
         this.birthDay = birthDay;
+        this.lifeEvents = lifeEvents;
+    }
+
+    public String getLifeEvents() {
+        return lifeEvents;
+    }
+
+    public void setLifeEvents(String lifeEvents) {
+        this.lifeEvents = lifeEvents;
     }
 
     public String getCity() {
@@ -55,9 +63,6 @@ public class Person {
         return lastTimeCalled;
     }
 
-    public int getUserId() {
-        return userId;
-    }
 
     public void setFriendId(int friendId) {
         this.friendId = friendId;
@@ -87,8 +92,6 @@ public class Person {
         this.lastTimeCalled = lastTimeCalled;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
+
 }
 
