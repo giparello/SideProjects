@@ -26,5 +26,14 @@ public class PersonController {
             personDao.addPerson(person);
         }return person;
     }
+    @RequestMapping(path = "friend/{friendId}", method = RequestMethod.DELETE)
+    public void deletePerson(@PathVariable int friendId){
+        personDao.deletePerson(friendId);
+    }
+    @RequestMapping(path = "friend/{friendId}", method = RequestMethod.POST)
+    public Person updatePerson(@RequestBody Person person){
+        personDao.updatePerson(person.getFriendId(), person);
+        return person;
+    }
 
 }
