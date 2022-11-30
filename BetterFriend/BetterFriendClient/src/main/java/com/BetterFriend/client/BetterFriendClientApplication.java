@@ -1,7 +1,9 @@
 package com.BetterFriend.client;
 
+import com.BetterFriend.client.model.AuthenticatedUser;
 import com.BetterFriend.client.services.ConsoleService;
 import com.BetterFriend.client.services.PersonService;
+import com.BetterFriend.client.util.BasicLoggerException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,13 +15,16 @@ public class BetterFriendClientApplication {
 	}
 	PersonService personService = new PersonService();
 	ConsoleService consoleService = new ConsoleService();
+	private AuthenticatedUser currentUser;
 
 	private void run(){
 		consoleService.printGreeting();
 		consoleService.promptForCredentials();
-
+		if (currentUser !=null) {
+			consoleService.printMenu();
+		}
 	}
-	private void mainMenu(){
+	private void mainMenu() throws BasicLoggerException {
 		int menuSelection = -1;
 		while (menuSelection!= 0){
 			consoleService.printMenu();
@@ -27,7 +32,7 @@ public class BetterFriendClientApplication {
 			if (menuSelection == 1) {
 				//      personService.createFriend();
 			} else if (menuSelection == 2) {
-				//      personService.listFriends();
+					personService.getAllFriends();
 			} else if (menuSelection == 3) {
 				//    personService.updateFriend();
 			} else if (menuSelection == 4) {

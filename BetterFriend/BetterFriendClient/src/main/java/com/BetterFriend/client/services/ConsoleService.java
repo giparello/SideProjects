@@ -30,7 +30,16 @@ public class ConsoleService {
         System.out.print(prompt);
         return scanner.nextLine();
     }
-
+    public int promptForInteger(int prompt) {
+        System.out.println(prompt);
+        while (true) {
+            try {
+                return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Please enter a number");
+            }
+        }
+    }
 
     public void printMenu(){
         System.out.println();
