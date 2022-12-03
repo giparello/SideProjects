@@ -1,8 +1,9 @@
 Begin Transaction;
+DROP TABLE IF EXISTS article_comment_FKs;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS articles;
 DROP TABLE IF EXISTS article_comments;
-DROP TABLE IF EXISTS article_comment_FKs;
+
 
 
 
@@ -22,7 +23,6 @@ CREATE TABLE article_comments (
 );
 CREATE TABLE articles(
 	article_id serial,
-	comment_id int,
 	author_name varchar(255),
 	article_body TEXT,
 	date_written DATE,
