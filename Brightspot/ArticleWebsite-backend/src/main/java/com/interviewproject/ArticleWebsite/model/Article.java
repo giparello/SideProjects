@@ -11,7 +11,7 @@ public class Article {
     private Date dateWritten;
 
     public Article(){
-        
+
     }
 
     public int getArticleId() {
