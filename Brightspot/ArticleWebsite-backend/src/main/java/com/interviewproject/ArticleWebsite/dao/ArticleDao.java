@@ -4,7 +4,7 @@ import com.interviewproject.ArticleWebsite.model.Article;
 
 import java.util.Date;
 import java.util.List;
-
+//interface makes classes injectable for dependency injection
 public interface ArticleDao {
     List<Article> getAllArticles();
 
