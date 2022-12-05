@@ -22,6 +22,7 @@ public class ArticleController {
     public List<Article> getAllArticles(){
         return this.articleDao.getAllArticles();
     }
+
     @RequestMapping(path = "/article/{articleId}", method = RequestMethod.GET)
     public Article getArticleByArticleId(@PathVariable int articleId){
         return this.articleDao.getArticleByArticleId(articleId);

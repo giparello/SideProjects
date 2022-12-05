@@ -8,6 +8,7 @@
               <li class="article">
               <p>{{article.articleId}}</p>
               <h1>{{article.articleName}}</h1>
+              <img> {{article.imageURL}}<img>
               <h4>{{article.articleMainPoint}}</h4>
               <p>{{article.authorName}}</p>
               <p class="row bottomGap">{{article.articleBody}}</p>

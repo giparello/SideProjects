@@ -23,7 +23,7 @@ public class JdbcArticleDao implements ArticleDao{
     @Override
     public List<Article> getAllArticles() {
         List<Article> results = new ArrayList<Article>();
-        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written\n" +
+        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url\n" +
                 "\tFROM public.articles;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
         while (rowSet.next()){
@@ -36,7 +36,7 @@ public class JdbcArticleDao implements ArticleDao{
     @Override
     public Article getArticleByArticleId(int articleId) {
         Article result = new Article();
-        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written\n" +
+        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url\n" +
                 "\tFROM public.articles WHERE article_id = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, articleId);
         while (rowSet.next()){
@@ -48,7 +48,7 @@ public class JdbcArticleDao implements ArticleDao{
     @Override
     public Article getArticleByArticleName(String articleName) {
         Article result = new Article();
-        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written\n" +
+        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url\n" +
                 "\tFROM public.articles WHERE article_name = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, articleName);
         while (rowSet.next()){
@@ -61,7 +61,7 @@ public class JdbcArticleDao implements ArticleDao{
     @Override
     public Article getArticleByAuthorName(String authorName) {
         Article result = new Article();
-        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written\n" +
+        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url\n" +
                 "\tFROM public.articles WHERE author_name = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, authorName);
         while (rowSet.next()){
@@ -74,7 +74,7 @@ public class JdbcArticleDao implements ArticleDao{
     @Override
     public Article getArticleByDate(Date date) {
         Article result = new Article();
-        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written\n" +
+        String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url\n" +
                 "\tFROM public.articles WHERE date_written = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, date);
         while (rowSet.next()){
@@ -92,6 +92,7 @@ public class JdbcArticleDao implements ArticleDao{
         result.setArticleMainPoint(rowSet.getString("article_main_point"));
         result.setArticleName(rowSet.getString("article_name"));
         result.setAuthorName(rowSet.getString("author_name"));
+        result.setImageURL(rowSet.getString("image_URL"));
         if (rowSet.getDate("date_written")!=null) {
             result.setDateWritten(rowSet.getDate("date_written"));
         }

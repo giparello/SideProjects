@@ -9,9 +9,17 @@ public class Article {
     private String articleMainPoint;
     private String articleBody;
     private Date dateWritten;
-
+    private String imageURL;
     public Article(){
 
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     public int getArticleId() {

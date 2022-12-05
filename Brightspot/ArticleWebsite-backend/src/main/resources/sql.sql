@@ -24,8 +24,11 @@ CREATE TABLE article_comments (
 CREATE TABLE articles(
 	article_id serial,
 	author_name varchar(255),
+	article_name varchar(255),
+	article_main_point varchar(255),
 	article_body TEXT,
 	date_written DATE,
+	image_URL TEXT,
 	CONSTRAINT pk_articleId PRIMARY KEY (article_id)
 );
 CREATE TABLE article_comment_FKs(
