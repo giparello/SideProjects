@@ -7,5 +7,8 @@ const http = axios.create({
 export default{
     getAllArticles(){
         return http.get('/article');
+    },
+    getArticle(articleId){
+        return http.get(`/article/${articleId}`)
     }
 }
