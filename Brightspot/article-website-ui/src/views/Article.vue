@@ -1,7 +1,7 @@
 <template>
   <section class="page">
       <article-detail/>
-      <article-list/>
+      <article-list class="clicked-list"/>
   </section>
 </template>
 

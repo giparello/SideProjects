@@ -6,15 +6,16 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     article:{
-      articleId:'',
+      articleId:0,
       authorName:'',
       articleName:'',
       articleMainPoint:'',
       articleBody:'',
       dateWritten:'',
-      imageURL:''
-
-    }
+      imageURL:'',
+      tag:''
+    },
+    articles:[]
   },
   mutations: {
     SET_CURRENT_ARTICLE(state, data){

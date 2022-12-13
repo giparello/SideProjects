@@ -1,56 +1,68 @@
 <template>
   <div>
     <div id="page-header">
-      <img v-bind:src="article.imageURL" />
       <div class="article-info">
-          <h2>{{article.articleName }}</h2>
-          <h4>{{article.articleMainPoint}}</h4>
-          <h3 id="author"><i class="fa-solid fa-location-dot blue"></i> {{ article.articleId }}</h3>
-        <h3><i class="fa-solid fa-phone blue"></i> {{ article.authorName }}</h3>
-        <h3 id="hours"><i class="fa-solid fa-clock blue"></i>{{article.dateWritten}}</h3>
-        
-        <h4><i class="fa-solid fa-star"></i> Avg Rating and # of Comments here</h4>
+        <h1>{{ article.articleName }}</h1>
+        <h4 class="article-mainpoint">{{ article.articleMainPoint }}</h4>
       </div>
     </div>
+    <img class="article-image" v-bind:src="article.imageURL" />
     <div id="page-main">
-      <h2>Our History</h2>
-      <p>{{ this.$store.state.article.body }}</p>
+      <div class="article-sideinfo">
+        <h3 class="article-id">Article No.{{ article.articleId }}</h3>
+        <h3 id="author" class="article-author">
+          Author: {{ article.authorName }}
+        </h3>
+        <h3 id="date-written" class="article-date">
+          Date Written:
+          {{ article.dateWritten }}
+        </h3>
+      </div>
+      <p class="article-body">{{ article.articleBody }}</p>
+      <h4 class="rating">Avg Rating and # of Comments here</h4>
+      <router-link class="comment-link" v-bind:to="{ name: 'comments' }"
+        >Comments</router-link
+      >
+      <div>
+        <h2>More Articles:</h2>
+      </div>
     </div>
-    
   </div>
 </template>
 
 <script>
-import articleService from "../services/articleService"
+import articleService from "../services/articleService";
 export default {
-    name:"brewery-detail",
-    data(){
-        return{
-            errorMsg:""
-        };
+  name: "article-detail",
+  methods: {
+    retrieveArticle() {
+      articleService
+        .getArticle(this.$route.params.id)
+        .then((response) => {
+          this.$store.commit("SET_CURRENT_ARTICLE", response.data);
+        })
+        .catch((error) => {
+          if (error.response && error.response.status === 404) {
+            alert("Article not available");
+          }
+        });
     },
-    methods:{
-        retrieveArticle(){
-            articleService.getArticle(this.$route.params.id).then(response =>{
-                this.$store.commit("SET_CURRENT_BREWERY", response.data);
-            }).catch(error=>{
-                if(error.response && error.response.status===404){
-                    alert("Article not available");
-                }
-            });
-        },
+    data() {
+      return {
+        errorMsg: "",
+      };
     },
-    created(){
-        this.retrieveArticle;
+  },
+  created() {
+    this.retrieveArticle();
+  },
+  computed: {
+    article() {
+      return this.$store.state.article;
     },
-    computed:{
-        article(){
-            return this.$store.state.article;
-        },
-    },
+  },
 };
 </script>
 
 <style>
-
 </style>
