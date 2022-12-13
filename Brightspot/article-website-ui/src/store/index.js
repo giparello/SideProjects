@@ -15,7 +15,17 @@ export default new Vuex.Store({
       imageURL:'',
       tag:''
     },
-    articles:[]
+    articles:[],
+    comment:{
+      commentId:0,
+      reviewerName:'',
+      commentBody:'',
+      dateWritten:'',
+      articleRating:'',
+      articleId:0,
+      commentHeader:''
+    },
+    comments:[],
   },
   mutations: {
     SET_CURRENT_ARTICLE(state, data){

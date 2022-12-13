@@ -13,6 +13,7 @@
       <div class="article-sideinfo">
         <p>Author: {{ article.authorName }}</p>
       <p>Date Written: {{ article.dateWritten }}</p>
+      <p>Topic: {{article.tag}}</p>
       </div>
       <img class="article-image" v-bind:src="article.imageURL" />
       

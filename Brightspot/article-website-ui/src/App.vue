@@ -38,7 +38,7 @@
   --page-header-font: Montserrat, sans-serif;
   --site-header-font: Ubuntu, sans-serif;
   --main-font: Roboto Slab, sans-serif;
-  --info-background: rgba(0, 0, 0, 0.2);
+  --info-background: rgba(0, 0, 0, 0.1);
 }
 * {
   padding: 0;
@@ -349,8 +349,23 @@ input:checked + label {
   justify-content: space-between;
 }
 .clicked-list{
-  background-color: blue;
+  background-color: white;
 }
+/**************COMMENT-LIST**************/
+.comment-card{
+  border:solid rgba(0, 0, 0, 0.1);
+  background-color: var(--info-background);
+}
+.comment-listinfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.add-commentbutton{
+  padding: 5px;
+}
+
+
 /***************DEVICE BREAKPOINTS************/
 @media screen and (max-width: 900px) {
   .article-card {

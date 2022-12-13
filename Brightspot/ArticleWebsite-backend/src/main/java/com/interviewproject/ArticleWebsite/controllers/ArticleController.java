@@ -2,6 +2,7 @@ package com.interviewproject.ArticleWebsite.controllers;
 
 import com.interviewproject.ArticleWebsite.dao.ArticleDao;
 import com.interviewproject.ArticleWebsite.model.Article;
+import com.interviewproject.ArticleWebsite.model.Comment;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -27,4 +28,5 @@ public class ArticleController {
     public Article getArticleByArticleId(@PathVariable int articleId){
         return this.articleDao.getArticleByArticleId(articleId);
     }
+
 }

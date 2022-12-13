@@ -17,14 +17,13 @@
           Date Written:
           {{ article.dateWritten }}
         </h3>
+        <h3>Topic: {{article.tag}}</h3>
       </div>
-      <p class="article-body">{{ article.articleBody }}</p>
-      <h4 class="rating">Avg Rating and # of Comments here</h4>
-      <router-link class="comment-link" v-bind:to="{ name: 'comments' }"
-        >Comments</router-link
-      >
       <div>
-        <h2>More Articles:</h2>
+      <p class="article-body">{{ article.articleBody }}</p>
+      </div>
+      <div>
+      <h4 class="rating">Avg Rating and # of Comments here</h4>
       </div>
     </div>
   </div>

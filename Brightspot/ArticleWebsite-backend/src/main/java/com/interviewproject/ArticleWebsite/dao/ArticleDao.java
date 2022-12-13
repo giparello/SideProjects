@@ -1,9 +1,9 @@
 package com.interviewproject.ArticleWebsite.dao;
 
 import com.interviewproject.ArticleWebsite.model.Article;
-
 import java.util.Date;
 import java.util.List;
+
 //interface makes classes injectable for dependency injection
 public interface ArticleDao {
     List<Article> getAllArticles();
@@ -12,7 +12,7 @@ public interface ArticleDao {
     public Article getArticleByArticleName(String articleName);
     public Article getArticleByAuthorName(String articleName);
     public Article getArticleByDate(Date date);
-
+    public Article getArticleByTag(String tag);
 
 
 }

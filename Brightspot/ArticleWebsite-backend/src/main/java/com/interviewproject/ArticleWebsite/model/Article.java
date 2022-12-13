@@ -10,6 +10,7 @@ public class Article {
     private String articleBody;
     private Date dateWritten;
     private String imageURL;
+    private String tag;
     public Article(){
 
     }
@@ -20,6 +21,14 @@ public class Article {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public int getArticleId() {
