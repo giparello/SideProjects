@@ -191,8 +191,9 @@ main #cards article {
 
 /*******************LOGIN/REGISTER/FORMS********************/
 .form {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 5px auto;
+  margin-bottom: 10px;
   padding: 25px;
   border-radius: 20px;
   background-color: white;
@@ -296,6 +297,7 @@ input:checked + label {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin: 10px;
   
 }
 .side-info{
@@ -327,6 +329,10 @@ background-color: rgba(44, 171, 255, 0.178) ;
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+.article-header{
+  font-size: 45px;
+  margin: 20px;
 }
 
 /************************ARTICLE LIST******************* */
@@ -391,6 +397,12 @@ background-color: rgba(44, 171, 255, 0.178) ;
   background-color:rgba(44, 171, 255, 0.4) ;
   border-radius: 10px;
 }
+.comment-inforating{
+  width:200px;
+  border-left: solid var(--nice-blue);
+  border-right:solid var(--nice-blue);
+  padding: 10px;
+}
 .form-button{
 padding: 3px;
   border: 2px solid rgba(44, 171, 255, 0.4);
@@ -398,6 +410,7 @@ padding: 3px;
   border-radius: 10px;
   margin: 20px;
 }
+
 
 /***************DEVICE BREAKPOINTS************/
 @media screen and (max-width: 900px) {

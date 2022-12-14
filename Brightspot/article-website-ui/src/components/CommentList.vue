@@ -7,9 +7,12 @@
           v-bind:key="comment.commentId"
           >
           <div class="comment-listinfo">
-                <p class="comment-info">Reviewer Name: {{comment.reviewerName}}</p>
-                <p class="comment-info">Date Posted: {{comment.dateWritten}}</p>
-                <p class="comment-info">Rating: {{comment.articleRating}}/5</p>
+                <p class="comment-inforating">Reviewer Name: {{comment.reviewerName}}</p>
+                <p class="comment-inforating">Date Posted: {{comment.dateWritten}}</p>
+                <p class="comment-inforating">Rating: {{comment.articleRating}}/5</p>
+            </div>
+            <div>
+            
             </div>
             <div class="comment-listheader">
                 <h2>{{comment.commentHeader}}</h2>

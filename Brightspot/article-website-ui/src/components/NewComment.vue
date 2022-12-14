@@ -4,11 +4,11 @@
     <form v-show="showForm" @submit.prevent="addComment" class="form">
       <h1 class="add-comment-header">Add a New Comment</h1>
       <div>
-        <label class="sr-only">Name:</label>
+        <label class="sr-only">Name: </label>
         <input class="text-input" v-model="comment.reviewerName" placeholder="Name" type="text" />
       </div>
       <div>
-        <label class="sr-only">Comment Body</label>
+        <label class="sr-only">Comment Body </label>
         <input class="text-input"
           v-model="comment.commentBody"
           placeholder="Comment Body"
@@ -16,10 +16,10 @@
         />
       </div>
       <div>
-        <label class="sr-only">Article Rating</label>
+        <label class="sr-only">Article Rating: </label>
         <select
           v-model="comment.articleRating"
-          placeholder="Rating (1-5)"
+          placeholder="select"
           type="text"
         ><option></option>
         <option>1</option>
@@ -29,7 +29,7 @@
         <option>5</option>
       </select>
       </div>
-      <label class="sr-only">Comment Header</label>
+      <label class="sr-only">Comment Header: </label>
       <input
         v-model="comment.commentHeader"
         placeholder="Comment Header"

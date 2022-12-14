@@ -8,8 +8,8 @@
     >
     
       <div class="list-header">
-        <h2>{{ article.articleName }}</h2>
-        <p>{{ article.articleMainPoint }}</p>
+        <h2 class="article-header">{{ article.articleName }}</h2>
+        <p class="article-mainpoint">{{ article.articleMainPoint }}</p>
         <div class="article-sideinfo">
         <p class="side-info">Author: {{ article.authorName }}</p>
       <p class="side-info">Topic: {{article.tag}}</p>
