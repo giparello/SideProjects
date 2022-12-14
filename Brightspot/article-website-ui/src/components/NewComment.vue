@@ -9,18 +9,30 @@
       </div>
       <div>
         <label class="sr-only">Comment Body</label>
-        <input v-model="comment.commentBody" placeholder="Comment Body" type="text" />
+        <input
+          v-model="comment.commentBody"
+          placeholder="Comment Body"
+          type="text"
+        />
       </div>
       <div>
         <label class="sr-only">Article Rating</label>
-        <input v-model="comment.articleRating" placeholder="Rating (1-5)" type="text" />
+        <input
+          v-model="comment.articleRating"
+          placeholder="Rating (1-5)"
+          type="text"
+        />
       </div>
       <label class="sr-only">Comment Header</label>
-      <input v-model="comment.commentHeader" placeholder="Comment Header" type="text" />
+      <input
+        v-model="comment.commentHeader"
+        placeholder="Comment Header"
+        type="text"
+      />
       <div>
         <button type="submit" class="button">Submit</button>
         <button v-on:click.prevent="resetForm" class="button">Cancel</button>
-        <p>{{this.comment.article_id}}</p>
+        <p>{{ this.comment.article_id }}</p>
       </div>
     </form>
   </section>
@@ -29,12 +41,20 @@
 <script>
 import commentService from "../services/commentService";
 export default {
-    methods:{
+  methods: {
     addComment() {
-      commentService.addNewComment(this.comment)
+      commentService
+        .addNewComment(this.comment)
         .then((response) => {
-          if (response.status ===201 || response.status===200) {
-            this.$router.push(`/article/${this.$store.state.article.articleId}`)
+          if (response.status === 201 || response.status === 200) {
+            this.showForm = false;
+            this.comment = {
+              article_id: this.$store.state.article.articleId,
+              name: "",
+              commentBody: "",
+              articleRating: "",
+              commentHeader: "",
+            };
           }
         })
         .catch((error) => {
@@ -42,19 +62,33 @@ export default {
         });
     },
     resetForm() {
-      this.showForm=false;
+      this.showForm = false;
+      this.comment = {
+              article_id: this.$store.state.article.articleId,
+              name: "",
+              commentBody: "",
+              articleRating: "",
+              commentHeader: "",
+            };
     },
-    displayForm(){
-      this.showForm=true;
-    }
+    displayForm() {
+      this.showForm = true;
+      this.comment = {
+              article_id: this.$store.state.article.articleId,
+              name: "",
+              commentBody: "",
+              articleRating: "",
+              commentHeader: "",
+            };
     },
+  },
   name: "new-comment",
   data() {
     return {
       message: "",
-      showForm:false,
+      showForm: false,
       comment: {
-        article_id:this.$store.state.article.articleId,
+        article_id: this.$store.state.article.articleId,
         name: "",
         commentBody: "",
         articleRating: "",

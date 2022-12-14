@@ -2,7 +2,7 @@
   <section class="page">
       <article-detail/>
       <h1 style="text-align:center">COMMENTS</h1>
-      <new-comment/>
+      <new-comment></new-comment>
       <comment-list></comment-list>
       <h2 style="text-align:center;background-color:white">More Articles:</h2>
       <article-list class="clicked-list"/>

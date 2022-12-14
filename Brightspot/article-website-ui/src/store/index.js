@@ -22,7 +22,7 @@ export default new Vuex.Store({
       commentBody:'',
       dateWritten:'',
       articleRating:'',
-      articleId:0,
+      articleId:'',
       commentHeader:''
     },
     comments:[],
