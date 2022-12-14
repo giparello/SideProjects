@@ -84,6 +84,25 @@ public class JdbcArticleDao implements ArticleDao{
     }
 
     @Override
+    public Article addArticle(Article article) {
+        Article newArticle = new Article();
+        newArticle.setArticleId(article.getArticleId());
+        newArticle.setAuthorName(article.getAuthorName());
+        newArticle.setDateWritten(article.getDateWritten());
+        newArticle.setArticleBody(article.getArticleBody());
+        newArticle.setArticleMainPoint(article.getArticleMainPoint());
+        newArticle.setArticleName(article.getArticleName());
+        newArticle.setImageURL(article.getImageURL());
+        newArticle.setTag(article.getTag());
+        String sql= "INSERT INTO public.articles(\n" +
+                "\tauthor_name, article_name, article_main_point, article_body, date_written, image_url, tag)\n" +
+                "\tVALUES (?, ?, ?, ?, ?, ?, ?) RETURNING article_id;";
+        int article_id = jdbcTemplate.queryForObject(sql, int.class,newArticle.getAuthorName(),newArticle.getArticleName(),newArticle.getArticleMainPoint(),newArticle.getArticleBody(),newArticle.getDateWritten(),newArticle.getImageURL(),newArticle.getTag());
+        newArticle.setArticleId(article_id);
+        return newArticle;
+    }
+
+    @Override
     public Article getArticleByDate(Date date) {
         Article result = new Article();
         String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url, tag\n" +

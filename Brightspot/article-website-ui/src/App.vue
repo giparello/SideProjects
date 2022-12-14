@@ -137,7 +137,8 @@ main #cards article {
   text-align: center;
   display: block;
   margin: 10px;
-  width: 500px;
+  margin-bottom: 40px;
+  width: 60%;
   height: 90%;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   position: relative;
@@ -296,9 +297,10 @@ input:checked + label {
   align-items: center;
 }
 .side-info{
-padding: 10px;
+padding: 5px;
 background-color: rgba(44, 171, 255, 0.178) ;
   border: 2px solid rgba(44, 171, 255, 0.4);
+  border-radius: 10px;
   
 }
 .article-rating {
@@ -364,7 +366,8 @@ background-color: rgba(44, 171, 255, 0.178) ;
 }
 .comment-listinfo{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: flex-start;
   font-size: 15px;
   margin-left: 5px;

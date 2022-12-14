@@ -28,5 +28,8 @@ public class ArticleController {
     public Article getArticleByArticleId(@PathVariable int articleId){
         return this.articleDao.getArticleByArticleId(articleId);
     }
-
+    @RequestMapping(path = "/article",method = RequestMethod.POST)
+    public Article addArticle(@RequestBody Article article){
+        return articleDao.addArticle(article);
+    }
 }

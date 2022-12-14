@@ -5,7 +5,7 @@
       <h1>Add a New Comment</h1>
       <div>
         <label class="sr-only">Name:</label>
-        <input v-model="comment.name" placeholder="Name" type="text" />
+        <input v-model="comment.reviewerName" placeholder="Name" type="text" />
       </div>
       <div>
         <label class="sr-only">Comment Body</label>
@@ -50,7 +50,7 @@ export default {
             this.showForm = false;
             this.comment = {
               article_id: this.$store.state.article.articleId,
-              name: "",
+              reviewerName: "",
               commentBody: "",
               articleRating: "",
               commentHeader: "",
