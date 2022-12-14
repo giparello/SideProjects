@@ -39,6 +39,7 @@
   --site-header-font: Ubuntu, sans-serif;
   --main-font: Roboto Slab, sans-serif;
   --info-background: rgba(0, 0, 0, 0.1);
+  --nice-blue: rgba(44, 171, 255, 0.4);
 }
 * {
   padding: 0;
@@ -295,6 +296,7 @@ input:checked + label {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  
 }
 .side-info{
 padding: 5px;
@@ -307,7 +309,11 @@ background-color: rgba(44, 171, 255, 0.178) ;
   margin-bottom: 0px;
 }
 .article-mainpoint {
+  margin: 10px;
+  padding: 10px;
   text-align: center;
+  border-top: solid var(--nice-blue);
+  border-bottom: solid var(--nice-blue);
 }
 .article-body {
   text-align: center;
@@ -322,6 +328,7 @@ background-color: rgba(44, 171, 255, 0.178) ;
   flex-direction: row;
   justify-content: center;
 }
+
 /************************ARTICLE LIST******************* */
 
 .articleHeader {
@@ -383,6 +390,13 @@ background-color: rgba(44, 171, 255, 0.178) ;
   border: 2px solid rgba(44, 171, 255, 0.4);
   background-color:rgba(44, 171, 255, 0.4) ;
   border-radius: 10px;
+}
+.form-button{
+padding: 3px;
+  border: 2px solid rgba(44, 171, 255, 0.4);
+  background-color:rgba(44, 171, 255, 0.4) ;
+  border-radius: 10px;
+  margin: 20px;
 }
 
 /***************DEVICE BREAKPOINTS************/

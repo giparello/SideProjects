@@ -1,15 +1,15 @@
 <template>
-  <section class="form">
-    <button v-on:click="displayForm()">Comment</button>
+  <section class="comment-form">
+    <button class="form-button" v-on:click="displayForm()">Add a new comment</button>
     <form v-show="showForm" @submit.prevent="addComment" class="form">
-      <h1>Add a New Comment</h1>
+      <h1 class="add-comment-header">Add a New Comment</h1>
       <div>
         <label class="sr-only">Name:</label>
-        <input v-model="comment.reviewerName" placeholder="Name" type="text" />
+        <input class="text-input" v-model="comment.reviewerName" placeholder="Name" type="text" />
       </div>
       <div>
         <label class="sr-only">Comment Body</label>
-        <input
+        <input class="text-input"
           v-model="comment.commentBody"
           placeholder="Comment Body"
           type="text"
@@ -17,11 +17,17 @@
       </div>
       <div>
         <label class="sr-only">Article Rating</label>
-        <input
+        <select
           v-model="comment.articleRating"
           placeholder="Rating (1-5)"
           type="text"
-        />
+        ><option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
       </div>
       <label class="sr-only">Comment Header</label>
       <input

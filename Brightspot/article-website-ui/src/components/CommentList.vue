@@ -1,5 +1,6 @@
 <template>
   <div>
+      
       <section>
           <article class="comment-card"
           v-for="comment in comments"
