@@ -132,6 +132,7 @@ main #cards {
 
 }
 main #cards article {
+  border:solid rgba(0, 0, 0, 0.377);
   background-color: white;
   text-align: center;
   display: block;
@@ -229,7 +230,7 @@ main #cards article {
   font-weight: bold;
   border: none;
   cursor: pointer;
-  color: white;
+  color: blue;
   background-color: var(--blue);
   text-decoration: none;
   margin: 10px;
@@ -291,9 +292,14 @@ input:checked + label {
   font-family: var(--main-font);
   display: flex;
   flex-direction: row;
-  text-align: center;
   justify-content: space-around;
-  align-content:center;
+  align-items: center;
+}
+.side-info{
+padding: 10px;
+background-color: rgba(44, 171, 255, 0.178) ;
+  border: 2px solid rgba(44, 171, 255, 0.4);
+  
 }
 .article-rating {
   margin-bottom: 0px;
@@ -358,17 +364,30 @@ input:checked + label {
 }
 .comment-listinfo{
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+  margin-left: 5px;
 }
 .add-commentbutton{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   padding: 5px;
 }
-
+.comment-info{
+  padding: 3px;
+  border: 2px solid rgba(44, 171, 255, 0.4);
+  background-color:rgba(44, 171, 255, 0.4) ;
+  border-radius: 10px;
+}
 
 /***************DEVICE BREAKPOINTS************/
 @media screen and (max-width: 900px) {
   .article-card {
+    width: 90% !important;
+  }
+  .comment-card{
     width: 90% !important;
   }
 }

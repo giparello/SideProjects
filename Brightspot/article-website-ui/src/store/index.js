@@ -31,6 +31,12 @@ export default new Vuex.Store({
     SET_CURRENT_ARTICLE(state, data){
       state.article=data;
     },
+    SET_CURRENT_COMMENT(state, data) {
+      state.comment = data;
+    },
+    SET_CURRENT_COMMENTS(state, data) {
+      state.comments = data;
+    },
   },
   actions: {
   },

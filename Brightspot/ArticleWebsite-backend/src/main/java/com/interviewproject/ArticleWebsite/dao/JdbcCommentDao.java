@@ -1,15 +1,17 @@
 package com.interviewproject.ArticleWebsite.dao;
 
-import com.interviewproject.ArticleWebsite.model.Article;
 import com.interviewproject.ArticleWebsite.model.Comment;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
+@CrossOrigin
 public class JdbcCommentDao implements CommentDao {
     private JdbcTemplate jdbcTemplate;
 
@@ -47,6 +49,7 @@ public class JdbcCommentDao implements CommentDao {
     @Override
     public Comment addComment(Comment comment) {
         Comment newComment = new Comment();
+        LocalDate date= LocalDate.now();
         newComment.setReviewerName(comment.getReviewerName());
         newComment.setDateWritten(comment.getDateWritten());
         newComment.setCommentBody(comment.getCommentBody());
@@ -57,7 +60,7 @@ public class JdbcCommentDao implements CommentDao {
         String sql="INSERT INTO public.article_comments(\n" +
                 "\treviewer_name, comment_body, date_written, article_rating, article_id, comment_header)\n" +
                 "\tVALUES (?, ?, ?, ?, ?, ?) RETURNING comment_id;";
-        int commentId =jdbcTemplate.queryForObject(sql, int.class,newComment.getReviewerName(),newComment.getCommentBody(),newComment.getDateWritten(),newComment.getArticleRating(),newComment.getArticle_id(), newComment.getCommentHeader());
+        int commentId =jdbcTemplate.queryForObject(sql, int.class,newComment.getReviewerName(),newComment.getCommentBody(),date ,newComment.getArticleRating(),newComment.getArticle_id(), newComment.getCommentHeader());
         newComment.setCommentId(commentId);
         return newComment;
     }

@@ -1,19 +1,14 @@
 <template>
   <div>
       <section>
-           
-           <div class="add-commentbutton">
-           <button class="add-commentbutton">ADD COMMENT</button>
-           </div>
           <article class="comment-card"
           v-for="comment in comments"
           v-bind:key="comment.commentId"
           >
-         
           <div class="comment-listinfo">
-                <p>Reviwer Name: {{comment.reviewerName}}</p>
-                <p>Date Posted: {{comment.dateWritten}}</p>
-                <p>Rating: {{comment.articleRating}}/5</p>
+                <p class="comment-info">Reviewer Name: {{comment.reviewerName}}</p>
+                <p class="comment-info">Date Posted: {{comment.dateWritten}}</p>
+                <p class="comment-info">Rating: {{comment.articleRating}}/5</p>
             </div>
             <div class="comment-listheader">
                 <h2>{{comment.commentHeader}}</h2>

@@ -10,5 +10,8 @@ export default{
     },
     getCommentByArticleId(articleId){
         return http.get(`/comment/${articleId}`);
+    },
+    addNewComment(comment){
+        return http.post(`/comment`, comment)
     }
 }

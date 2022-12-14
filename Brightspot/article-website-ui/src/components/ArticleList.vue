@@ -6,15 +6,17 @@
       v-bind:key="article.articleId"
       v-on:click="viewArticleDetail(article.articleId)"
     >
+    
       <div class="list-header">
         <h2>{{ article.articleName }}</h2>
         <p>{{ article.articleMainPoint }}</p>
+        <div class="article-sideinfo">
+        <p class="side-info">Author: {{ article.authorName }}</p>
+      <p class="side-info">Topic: {{article.tag}}</p>
+      <p class="side-info">Date Written: {{ article.dateWritten }}</p>
       </div>
-      <div class="article-sideinfo">
-        <p>Author: {{ article.authorName }}</p>
-      <p>Date Written: {{ article.dateWritten }}</p>
-      <p>Topic: {{article.tag}}</p>
       </div>
+      
       <img class="article-image" v-bind:src="article.imageURL" />
       
     </article>
