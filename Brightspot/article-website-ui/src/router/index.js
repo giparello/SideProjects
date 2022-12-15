@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Article from '../views/Article.vue'
 import NewArticleForm from '../views/NewArticleForm.vue'
+import TechArticles from '../views/TechArticles.vue'
 Vue.use(VueRouter)
 
 
@@ -24,6 +25,11 @@ const router = new VueRouter({
     path:"/articleForm",
     name:"ArticleForm",
     component:NewArticleForm
+  },
+  {
+    path:"/techArticles",
+    name: "TechArticles",
+    component:TechArticles
   }
     
   ]

@@ -34,7 +34,7 @@ export default {
     },
   },
   created() {
-    articleService.getAllArticles().then((response) => {
+    articleService.getArticleByTag('Tech').then((response) => {
       this.articles = response.data;
     });
   },
@@ -42,7 +42,5 @@ export default {
 </script>
 
 <style>
-.red {
-  color: red;
-}
+
 </style>

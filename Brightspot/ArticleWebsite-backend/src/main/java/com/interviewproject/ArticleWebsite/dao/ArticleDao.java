@@ -12,7 +12,7 @@ public interface ArticleDao {
     public Article getArticleByArticleName(String articleName);
     public Article getArticleByAuthorName(String articleName);
     public Article getArticleByDate(Date date);
-    public Article getArticleByTag(String tag);
+    public List<Article> getArticleByTag(String tag);
     Article addArticle(Article article);
 
 

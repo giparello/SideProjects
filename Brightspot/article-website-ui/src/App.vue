@@ -9,7 +9,7 @@
           <router-link class="header-link" v-bind:to="{ name: 'home' }"
             >Home</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'login' }"
+          <router-link class="header-link" v-bind:to="{ name: 'TechArticles' }"
             >Tech</router-link
           >
           <router-link class="header-link" v-bind:to="{ name: 'logout' }"
@@ -432,6 +432,7 @@ padding: 10px;
 }
 .article-body{
   text-align: center;
+  font-size: 25px;
   border-top: solid var(--nice-blue);
   border-bottom: solid var(--nice-blue);
   padding: 20px;

@@ -13,5 +13,8 @@ export default{
     },
     addNewArticle(article){
         return http.post(`/article`, article)
+    },
+    getArticleByTag(tag){
+        return http.get(`article/type/${tag}`)
     }
 }

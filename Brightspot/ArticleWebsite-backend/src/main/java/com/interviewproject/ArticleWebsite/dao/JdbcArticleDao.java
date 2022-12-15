@@ -71,13 +71,13 @@ public class JdbcArticleDao implements ArticleDao{
         return result;
     }
     @Override
-    public Article getArticleByTag(String tag) {
-        Article result = new Article();
+    public List<Article> getArticleByTag(String tag) {
+        List<Article> result = new ArrayList<>();
         String sql = "SELECT article_id, author_name, article_name, article_main_point, article_body, date_written, image_url, tag\n" +
                 "\tFROM public.articles WHERE tag = ?;";
         SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, tag);
         while (rowSet.next()){
-            result = mapRowToArticle(rowSet);
+            result.add(mapRowToArticle(rowSet));
         }
 
         return result;

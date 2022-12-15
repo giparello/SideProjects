@@ -2,8 +2,8 @@
   <div>
     <div id="page-header">
       <div class="article-info">
-        <h1>{{ article.articleName }}</h1>
-        <h4 class="article-mainpoint">{{ article.articleMainPoint }}</h4>
+        <h1 class="article-header">{{ article.articleName }}</h1>
+        <h3 class="article-mainpoint" style="white-space:pre-wrap;">{{ article.articleMainPoint }}</h3>
       </div>
     </div>
     <img class="article-image" v-bind:src="article.imageURL" />
@@ -18,7 +18,7 @@
         <h3 class="side-info">Topic: {{ article.tag }}</h3>
       </div>
       <div>
-        <p class="article-body">{{ article.articleBody }}</p>
+        <p class="article-body" style="white-space:pre-wrap;">{{ article.articleBody }}</p>
       </div>
       <div>
         <!--<h4 class="rating">Avg Rating and # of Comments here</h4>-->

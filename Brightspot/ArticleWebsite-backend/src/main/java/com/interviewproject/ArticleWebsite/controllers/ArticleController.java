@@ -32,4 +32,8 @@ public class ArticleController {
     public Article addArticle(@RequestBody Article article){
         return articleDao.addArticle(article);
     }
+    @RequestMapping(path = "/article/type/{tag}",method = RequestMethod.GET)
+    public List<Article> getArticlesByTag(@PathVariable String tag){
+        return articleDao.getArticleByTag(tag);
+    }
 }
