@@ -18,9 +18,10 @@
           <router-link class="header-link" v-bind:to="{ name: 'login' }"
             >Sports</router-link
           >
-          <router-link class="header-link header-link-last" v-bind:to="{ name: 'logout' }"
+          <router-link class="header-link" v-bind:to="{ name: 'logout' }"
             >Politics</router-link
           >
+          <router-link class="header-link header-link-last" v-bind:to="{name: 'ArticleForm'}">Add New Article</router-link>
         </div>
       </nav>
     </header>
@@ -385,6 +386,12 @@ background-color: rgba(44, 171, 255, 0.178) ;
   font-size: 15px;
   margin-left: 5px;
 }
+.comment-listheader{
+  margin-left: 10px;
+}
+.comment-listbody{
+  margin-left: 10px;
+}
 .add-commentbutton{
   display: flex;
   flex-direction: row;
@@ -398,27 +405,67 @@ background-color: rgba(44, 171, 255, 0.178) ;
   border-radius: 10px;
 }
 .comment-inforating{
-  width:200px;
+  width:250px;
   border-left: solid var(--nice-blue);
   border-right:solid var(--nice-blue);
   padding: 10px;
+  text-align: center;
 }
 .form-button{
-padding: 3px;
+padding: 10px;
   border: 2px solid rgba(44, 171, 255, 0.4);
-  background-color:rgba(44, 171, 255, 0.4) ;
+  background-color:rgba(44, 171, 255, 0.2) ;
   border-radius: 10px;
   margin: 20px;
 }
-
-
+.text-input{
+  border: solid var(--nice-blue);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.rating-input{
+    border: solid var(--nice-blue);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.article-body{
+  text-align: center;
+  border-top: solid var(--nice-blue);
+  border-bottom: solid var(--nice-blue);
+  padding: 20px;
+}
+.article-form{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 80%;
+}
+.article-text-input{
+  border: solid var(--nice-blue);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width:500px;
+}
+.article-rating-input{
+  border: solid var(--nice-blue);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+.new-article-body{
+  height: 200px;
+}
 /***************DEVICE BREAKPOINTS************/
 @media screen and (max-width: 900px) {
   .article-card {
     width: 90% !important;
   }
   .comment-card{
-    width: 90% !important;
+    text-align: center;
   }
 }
 </style>

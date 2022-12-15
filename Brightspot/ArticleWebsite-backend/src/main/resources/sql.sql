@@ -15,8 +15,8 @@ CREATE TABLE users(
 CREATE TABLE articles(
 	article_id serial,
 	author_name varchar(255),
-	article_name varchar(255),
-	article_main_point varchar(255),
+	article_name TEXT,
+	article_main_point TEXT,
 	article_body TEXT,
 	date_written DATE,
 	image_URL TEXT,

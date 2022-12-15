@@ -1,14 +1,20 @@
 <template>
   <section class="comment-form">
-    <button class="form-button" v-on:click="displayForm()">Add a new comment</button>
+    <button class="form-button" v-show="!showForm" v-on:click="displayForm()">Add a new comment</button>
     <form v-show="showForm" @submit.prevent="addComment" class="form">
-      <h1 class="add-comment-header">Add a New Comment</h1>
+      <h1 class="add-comment-header">New Comment</h1>
       <div>
-        <label class="sr-only">Name: </label>
+        <label class="sr-only"></label>
         <input class="text-input" v-model="comment.reviewerName" placeholder="Name" type="text" />
       </div>
+      <label class="sr-only"></label>
+      <input class="text-input"
+        v-model="comment.commentHeader"
+        placeholder="Comment Header"
+        type="text"
+      />
       <div>
-        <label class="sr-only">Comment Body </label>
+        <label class="sr-only"></label>
         <input class="text-input"
           v-model="comment.commentBody"
           placeholder="Comment Body"
@@ -17,7 +23,7 @@
       </div>
       <div>
         <label class="sr-only">Article Rating: </label>
-        <select
+        <select class="rating-input"
           v-model="comment.articleRating"
           placeholder="select"
           type="text"
@@ -29,15 +35,10 @@
         <option>5</option>
       </select>
       </div>
-      <label class="sr-only">Comment Header: </label>
-      <input
-        v-model="comment.commentHeader"
-        placeholder="Comment Header"
-        type="text"
-      />
+      
       <div>
-        <button type="submit" class="button">Submit</button>
-        <button v-on:click.prevent="resetForm" class="button">Cancel</button>
+        <button type="submit" class="form-button">Submit</button>
+        <button v-on:click.prevent="resetForm" class="form-button">Cancel</button>
         <p>{{ this.comment.article_id }}</p>
       </div>
     </form>
@@ -54,6 +55,7 @@ export default {
         .then((response) => {
           if (response.status === 201 || response.status === 200) {
             this.showForm = false;
+            commentService.getAllComments;
             this.comment = {
               article_id: this.$store.state.article.articleId,
               reviewerName: "",

@@ -10,20 +10,18 @@
     <div id="page-main">
       <div class="article-sideinfo">
         <h3 class="side-info">Article No.{{ article.articleId }}</h3>
-        <h3 id="author" class="side-info">
-          Author: {{ article.authorName }}
-        </h3>
+        <h3 id="author" class="side-info">Author: {{ article.authorName }}</h3>
         <h3 id="date-written" class="side-info">
           Date Written:
           {{ article.dateWritten }}
         </h3>
-        <h3 class="side-info">Topic: {{article.tag}}</h3>
+        <h3 class="side-info">Topic: {{ article.tag }}</h3>
       </div>
       <div>
-      <p class="article-body">{{ article.articleBody }}</p>
+        <p class="article-body">{{ article.articleBody }}</p>
       </div>
       <div>
-      <!--<h4 class="rating">Avg Rating and # of Comments here</h4>-->
+        <!--<h4 class="rating">Avg Rating and # of Comments here</h4>-->
       </div>
     </div>
   </div>

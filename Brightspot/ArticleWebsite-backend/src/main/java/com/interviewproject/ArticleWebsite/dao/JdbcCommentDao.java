@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class JdbcCommentDao implements CommentDao {
     @Override
     public Comment addComment(Comment comment) {
         Comment newComment = new Comment();
-        LocalDate date= LocalDate.now();
+        LocalDateTime date= LocalDateTime.now();
         newComment.setReviewerName(comment.getReviewerName());
         newComment.setDateWritten(comment.getDateWritten());
         newComment.setCommentBody(comment.getCommentBody());

@@ -10,5 +10,8 @@ export default{
     },
     getArticle(articleId){
         return http.get(`/article/${articleId}`)
+    },
+    addNewArticle(article){
+        return http.post(`/article`, article)
     }
 }
