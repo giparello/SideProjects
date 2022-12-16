@@ -4,6 +4,9 @@ import Home from '../views/Home.vue'
 import Article from '../views/Article.vue'
 import NewArticleForm from '../views/NewArticleForm.vue'
 import TechArticles from '../views/TechArticles.vue'
+import SportsArticles from '../views/SportsArticles.vue'
+import FinanceArticles from '../views/FinanceArticles.vue'
+import EntertainmentArticles from '../views/EntertainmentArticles.vue'
 Vue.use(VueRouter)
 
 
@@ -30,8 +33,22 @@ const router = new VueRouter({
     path:"/techArticles",
     name: "TechArticles",
     component:TechArticles
+  },
+  {
+    path:"/sportsArticles",
+    name:"SportsArticles",
+    component: SportsArticles
+  },
+  {
+  path:"/financeArticles",
+  name:"FinanceArticles",
+  component:FinanceArticles
+  },
+  {
+    path:"/entertainmentArticles",
+    name:"EntertainmentArticles",
+    component: EntertainmentArticles
   }
-    
   ]
 })
 

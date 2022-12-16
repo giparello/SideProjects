@@ -64,9 +64,9 @@
       >
         <option></option>
         <option>Tech</option>
-        <option>Medicine</option>
+        <option>Entertainment</option>
         <option>Sports</option>
-        <option>Politics</option>
+        <option>Finance</option>
       </select>
 
       <div>

@@ -39,7 +39,6 @@
       <div>
         <button type="submit" class="form-button">Submit</button>
         <button v-on:click.prevent="resetForm" class="form-button">Cancel</button>
-        <p>{{ this.comment.article_id }}</p>
       </div>
     </form>
   </section>

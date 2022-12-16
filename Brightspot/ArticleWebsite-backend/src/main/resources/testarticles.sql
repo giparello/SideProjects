@@ -1,4 +1,1 @@
-INSERT INTO public.articles(
-	author_name, article_name, article_main_point, article_body, date_written, image_url, tag)
-	VALUES ('Gianni Parello', 'Running any NPM package in the browser locally', 'Scrimba is a platform for interactive coding screencast where
-you can run the code at any moment in time.', 'JavaScript has never had any official solution for distributing packages, and every web platform (Rails, Django etc) has their own idea of how to structure and package JavaScript. In the last few years NPM has started becoming the canonical way of distribution, with Webpack as the build system, but there’s no way to load NPM packages in the browser without a server-side component.', '01-01-2022', 'https://mave.me/img/projects/full_placeholder.png', 'tech') RETURNING article_id;
+How Special Olympics spreads its message of inclusivity with its portfolio of unique microsites

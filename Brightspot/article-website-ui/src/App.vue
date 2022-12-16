@@ -12,14 +12,14 @@
           <router-link class="header-link" v-bind:to="{ name: 'TechArticles' }"
             >Tech</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'logout' }"
-            >Medicine</router-link
+          <router-link class="header-link" v-bind:to="{ name: 'EntertainmentArticles' }"
+            >Entertainment</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'login' }"
+          <router-link class="header-link" v-bind:to="{ name: 'SportsArticles' }"
             >Sports</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'logout' }"
-            >Politics</router-link
+          <router-link class="header-link" v-bind:to="{ name: 'FinanceArticles' }"
+            >Finance</router-link
           >
           <router-link class="header-link header-link-last" v-bind:to="{name: 'ArticleForm'}">Add New Article</router-link>
         </div>
