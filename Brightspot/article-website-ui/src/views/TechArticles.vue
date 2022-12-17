@@ -1,15 +1,14 @@
 <template>
+  <!--list of sports articles component-->
   <tech-article-list></tech-article-list>
 </template>
 
 <script>
-import TechArticleList from '../components/TechArticleList.vue'
+import TechArticleList from "../components/TechArticleList.vue";
 export default {
   components: { TechArticleList },
-
-}
+};
 </script>
 
 <style>
-
 </style>

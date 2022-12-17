@@ -10,7 +10,7 @@ import EntertainmentArticles from '../views/EntertainmentArticles.vue'
 Vue.use(VueRouter)
 
 
-
+//Create router and paths for pages
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,

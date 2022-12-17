@@ -1,9 +1,10 @@
 <template>
+  <!-- CREATE A FORM WHICH CAN ADD NEW ARTICLES-->
   <section class="article-form">
-    <form @submit.prevent="addArticle" >
+    <form @submit.prevent="addArticle">
       <h1 class="add-article-header">New Article</h1>
       <div>
-        <label class="sr-only"></label>
+        
         <input
           class="article-text-input"
           v-model="article.authorName"
@@ -12,7 +13,7 @@
         />
       </div>
       <div>
-        <label class="sr-only"></label>
+        
         <input
           class="article-text-input"
           v-model="article.articleName"
@@ -20,7 +21,7 @@
           type="text"
         />
       </div>
-      <label class="sr-only"></label>
+      
       <input
         class="article-text-input"
         v-model="article.articleMainPoint"
@@ -28,7 +29,7 @@
         type="text"
       />
       <div>
-        <label class="sr-only"></label>
+        
         <textarea
           class="article-text-input new-article-body"
           v-model="article.articleBody"
@@ -37,7 +38,7 @@
         />
       </div>
       <div>
-        <label class="sr-only"></label>
+        
         <input
           class="article-text-input"
           v-model="article.dateWritten"
@@ -46,7 +47,7 @@
         />
       </div>
       <div>
-        <label class="sr-only"></label>
+        
         <input
           class="article-text-input"
           v-model="article.imageURL"
@@ -68,11 +69,11 @@
         <option>Sports</option>
         <option>Finance</option>
       </select>
-
+      <!--Submit and reset form buttons-->
       <div>
         <button type="submit" class="form-button">Submit</button>
         <button v-on:click.prevent="resetForm" class="form-button">
-          Cancel
+          Reset Form
         </button>
       </div>
     </form>
@@ -83,6 +84,7 @@
 import articleService from "../services/articleService";
 export default {
   methods: {
+    //METHOD TO ADD ARTICLE
     addArticle() {
       articleService
         .addNewArticle(this.article)
@@ -105,6 +107,7 @@ export default {
           alert(error.response);
         });
     },
+    //METHOD TO RESET FORM
     resetForm() {
       this.showForm = false;
       this.article = {
@@ -117,8 +120,9 @@ export default {
         tag: "",
       };
     },
+    //METHOD TO DISPLAY FORM, ALSO RESETS THE FORM
     displayForm() {
-      this.showForm=!this.showForm
+      this.showForm = !this.showForm;
       this.article = {
         authorName: "",
         articleName: "",
@@ -130,6 +134,7 @@ export default {
       };
     },
   },
+  //DATA FOR A NEW ARTICLE
   name: "new-article",
   data() {
     return {

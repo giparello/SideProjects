@@ -1,17 +1,17 @@
 import axios from 'axios';
-
+//establish base URL
 const http = axios.create({
     baseURL: "http://localhost:3000"
 })
-
-export default{
-    getAllComments(){
+//use axios to link to API and endpoints
+export default {
+    getAllComments() {
         return http.get(`/comment`);
     },
-    getCommentByArticleId(articleId){
+    getCommentByArticleId(articleId) {
         return http.get(`/comment/${articleId}`);
     },
-    addNewComment(comment){
+    addNewComment(comment) {
         return http.post(`/comment`, comment)
     }
 }

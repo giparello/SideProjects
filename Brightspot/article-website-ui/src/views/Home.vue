@@ -1,15 +1,16 @@
 <template>
+  <!--home page (list of articles)-->
   <div class="home">
     <article-list></article-list>
   </div>
 </template>
 
 <script>
-import ArticleList from '../components/ArticleList.vue';
+import ArticleList from "../components/ArticleList.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-   ArticleList,
-  }
-}
+    ArticleList,
+  },
+};
 </script>

@@ -1,4 +1,5 @@
 <template>
+  <!--create a comment detail page for (potentially) making comments clickable-->
   <div>
     <h1>{{ comment.commentBody }}</h1>
   </div>
@@ -9,6 +10,7 @@ import commentService from "../services/commentService";
 export default {
   name: "comment-detail",
   methods: {
+    //get specific comment
     retrieveComment() {
       commentService
         .getCommentByArticleId(this.$route.params.commentId)
@@ -27,6 +29,7 @@ export default {
       };
     },
   },
+  //establish the comment
   created() {
     this.retrieveComment();
   },

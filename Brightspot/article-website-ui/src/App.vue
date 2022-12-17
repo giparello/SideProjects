@@ -1,9 +1,13 @@
 <template>
+  <!--create the main application-->
   <div>
+    <!--header for every page-->
     <header>
+      <!--page name-->
       <h1>
-        <router-link v-bind:to="{ name: 'home' }">Article Website</router-link>
+        <router-link v-bind:to="{ name: 'home' }">TechNews.com</router-link>
       </h1>
+      <!-- nav bar with links to parts of site-->
       <nav>
         <div class="nav-links">
           <router-link class="header-link" v-bind:to="{ name: 'home' }"
@@ -12,16 +16,26 @@
           <router-link class="header-link" v-bind:to="{ name: 'TechArticles' }"
             >Tech</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'EntertainmentArticles' }"
+          <router-link
+            class="header-link"
+            v-bind:to="{ name: 'EntertainmentArticles' }"
             >Entertainment</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'SportsArticles' }"
+          <router-link
+            class="header-link"
+            v-bind:to="{ name: 'SportsArticles' }"
             >Sports</router-link
           >
-          <router-link class="header-link" v-bind:to="{ name: 'FinanceArticles' }"
+          <router-link
+            class="header-link"
+            v-bind:to="{ name: 'FinanceArticles' }"
             >Finance</router-link
           >
-          <router-link class="header-link header-link-last" v-bind:to="{name: 'ArticleForm'}">Add New Article</router-link>
+          <router-link
+            class="header-link header-link-last"
+            v-bind:to="{ name: 'ArticleForm' }"
+            >Add New Article</router-link
+          >
         </div>
       </nav>
     </header>
@@ -106,21 +120,21 @@ nav label,
   height: 100%;
   border-left: solid white;
 }
-.header-link-last{
+.header-link-last {
   border-right: solid white;
 }
 /****************************MAIN************************* */
 main {
-    margin-top: -70px;
-    position: relative;
-    z-index: 1;
+  margin-top: -70px;
+  position: relative;
+  z-index: 1;
 }
 #sort-options {
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-    color: white;
-    margin: 0 50px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+  color: white;
+  margin: 0 50px;
 }
 .fa-star {
   color: var(--yellow);
@@ -131,10 +145,9 @@ main #cards {
   justify-content: center;
   justify-content: space-around;
   flex-wrap: wrap;
-
 }
 main #cards article {
-  border:solid rgba(0, 0, 0, 0.377);
+  border: solid rgba(0, 0, 0, 0.377);
   background-color: white;
   text-align: center;
   display: block;
@@ -190,7 +203,7 @@ main #cards article {
   padding: 10px 20px;
 }
 
-/*******************LOGIN/REGISTER/FORMS********************/
+/*******************FORMS********************/
 .form {
   max-width: 600px;
   margin: 5px auto;
@@ -219,14 +232,6 @@ main #cards article {
   padding: 5px;
   border-radius: 5px;
 }
-.alert-danger {
-  background-color: red;
-  color: white;
-}
-.alert-success {
-  background-color: green;
-  color: white;
-}
 .button {
   font-size: 15px;
   padding: 10px;
@@ -248,24 +253,6 @@ main #cards article {
   margin-bottom: -10px;
   position: relative;
   z-index: 1;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.radio-button {
-  background-color: rgba(0, 0, 255, 0.5);
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
-  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-input:checked + label {
-  background-color: rgba(0, 0, 255, 1);
 }
 
 /*********************ARTICLE PAGE*******************/
@@ -299,14 +286,12 @@ input:checked + label {
   justify-content: space-around;
   align-items: center;
   margin: 10px;
-  
 }
-.side-info{
-padding: 5px;
-background-color: rgba(44, 171, 255, 0.178) ;
+.side-info {
+  padding: 5px;
+  background-color: rgba(44, 171, 255, 0.178);
   border: 2px solid rgba(44, 171, 255, 0.4);
   border-radius: 10px;
-  
 }
 .article-rating {
   margin-bottom: 0px;
@@ -324,14 +309,14 @@ background-color: rgba(44, 171, 255, 0.178) ;
 .rating {
   text-align: center;
 }
-.comment-link{
+.comment-link {
   font-size: 15px;
   font-family: var(--main-font);
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.article-header{
+.article-header {
   font-size: 45px;
   margin: 20px;
 }
@@ -370,15 +355,15 @@ background-color: rgba(44, 171, 255, 0.178) ;
   display: flex;
   justify-content: space-between;
 }
-.clicked-list{
+.clicked-list {
   background-color: white;
 }
 /**************COMMENT-LIST**************/
-.comment-card{
-  border:solid rgba(0, 0, 0, 0.1);
+.comment-card {
+  border: solid rgba(0, 0, 0, 0.1);
   background-color: var(--info-background);
 }
-.comment-listinfo{
+.comment-listinfo {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -386,78 +371,79 @@ background-color: rgba(44, 171, 255, 0.178) ;
   font-size: 15px;
   margin-left: 5px;
 }
-.comment-listheader{
+.comment-listheader {
   margin-left: 10px;
 }
-.comment-listbody{
+.comment-listbody {
   margin-left: 10px;
 }
-.add-commentbutton{
+.add-commentbutton {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 5px;
 }
-.comment-info{
+.comment-info {
   padding: 3px;
   border: 2px solid rgba(44, 171, 255, 0.4);
-  background-color:rgba(44, 171, 255, 0.4) ;
+  background-color: rgba(44, 171, 255, 0.4);
   border-radius: 10px;
 }
-.comment-inforating{
-  width:250px;
+.comment-inforating {
+  width: 250px;
   border-left: solid var(--nice-blue);
-  border-right:solid var(--nice-blue);
+  border-right: solid var(--nice-blue);
   padding: 10px;
   text-align: center;
 }
-.form-button{
-padding: 10px;
+.form-button {
+  padding: 10px;
   border: 2px solid rgba(44, 171, 255, 0.4);
-  background-color:rgba(44, 171, 255, 0.2) ;
+  background-color: rgba(44, 171, 255, 0.2);
   border-radius: 10px;
   margin: 20px;
 }
-.text-input{
+.text-input {
   border: solid var(--nice-blue);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
-.rating-input{
-    border: solid var(--nice-blue);
+/**************FINISHING TOUCHES************* */
+.rating-input {
+  border: solid var(--nice-blue);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
-.article-body{
+.article-body {
   text-align: center;
   font-size: 25px;
   border-top: solid var(--nice-blue);
   border-bottom: solid var(--nice-blue);
   padding: 20px;
 }
-.article-form{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-width: 80%;
+.article-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
 }
-.article-text-input{
+.article-text-input {
   border: solid var(--nice-blue);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
-  width:500px;
+  width: 500px;
 }
-.article-rating-input{
+.article-rating-input {
   border: solid var(--nice-blue);
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 }
-.new-article-body{
+.new-article-body {
   height: 200px;
 }
 /***************DEVICE BREAKPOINTS************/
@@ -465,8 +451,14 @@ width: 80%;
   .article-card {
     width: 90% !important;
   }
-  .comment-card{
+  .comment-card {
     text-align: center;
+  }
+  .article-form {
+    width: 90%;
+  }
+  .article-text-input{
+    width: 90%;
   }
 }
 </style>

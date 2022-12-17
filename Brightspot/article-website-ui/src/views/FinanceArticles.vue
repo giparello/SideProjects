@@ -1,16 +1,15 @@
 <template>
+  <!--list of finance articles component-->
   <finance-article-list></finance-article-list>
 </template>
 
 <script>
-import FinanceArticleList from "../components/FinanceArticleList.vue"
+import FinanceArticleList from "../components/FinanceArticleList.vue";
 
 export default {
   components: { FinanceArticleList },
-
-}
+};
 </script>
 
 <style>
-
 </style>

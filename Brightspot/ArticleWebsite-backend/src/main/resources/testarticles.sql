@@ -1,1 +1,0 @@
-How Special Olympics spreads its message of inclusivity with its portfolio of unique microsites
