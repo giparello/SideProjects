@@ -2,7 +2,9 @@ package com.interviewproject.ArticleWebsite.model;
 
 import java.util.Date;
 
+//creation of comment object model
 public class Comment {
+    //variables
     private int commentId;
     private String reviewerName;
     private String commentBody;
@@ -11,8 +13,21 @@ public class Comment {
     private int article_id;
     private String commentHeader;
 
+    //constructor with no parameters
     public Comment(){}
 
+    //constructor with parameters
+    public Comment(int commentId, String reviewerName, String commentBody, Date dateWritten, int articleRating, int article_id, String commentHeader) {
+        this.commentId = commentId;
+        this.reviewerName = reviewerName;
+        this.commentBody = commentBody;
+        this.dateWritten = dateWritten;
+        this.articleRating = articleRating;
+        this.article_id = article_id;
+        this.commentHeader = commentHeader;
+    }
+
+    //getters and setters
     public String getCommentHeader() {
         return commentHeader;
     }

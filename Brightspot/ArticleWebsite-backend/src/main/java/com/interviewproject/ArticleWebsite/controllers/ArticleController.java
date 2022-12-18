@@ -11,27 +11,32 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class ArticleController {
+    //Instantiate Data access object
     private ArticleDao articleDao;
 
-    //dependency injection
+    //Constructor
     public ArticleController(ArticleDao articleDao){
     this.articleDao = articleDao;
     }
 
-    //TODO finish return statement
+    //create endpoint to get all of the articles
     @RequestMapping(path = "/article", method = RequestMethod.GET)
     public List<Article> getAllArticles(){
         return this.articleDao.getAllArticles();
     }
 
+    //create endpoint to get articles by article ID
     @RequestMapping(path = "/article/{articleId}", method = RequestMethod.GET)
     public Article getArticleByArticleId(@PathVariable int articleId){
         return this.articleDao.getArticleByArticleId(articleId);
     }
+    //create endpoint to add a new article
     @RequestMapping(path = "/article",method = RequestMethod.POST)
     public Article addArticle(@RequestBody Article article){
         return articleDao.addArticle(article);
     }
+
+    //create endpoint to get articles by tag
     @RequestMapping(path = "/article/type/{tag}",method = RequestMethod.GET)
     public List<Article> getArticlesByTag(@PathVariable String tag){
         return articleDao.getArticleByTag(tag);

@@ -2,7 +2,9 @@ package com.interviewproject.ArticleWebsite.model;
 
 import java.util.Date;
 
+//create article object model
 public class Article {
+    //variables
     private int articleId;
     private String authorName;
     private String articleName;
@@ -11,10 +13,24 @@ public class Article {
     private Date dateWritten;
     private String imageURL;
     private String tag;
+
+    //constructor with no parameters
     public Article(){
 
     }
+    //constructor with parameters
+    public Article(int articleId, String authorName, String articleName, String articleMainPoint, String articleBody, Date dateWritten, String imageURL, String tag) {
+        this.articleId = articleId;
+        this.authorName = authorName;
+        this.articleName = articleName;
+        this.articleMainPoint = articleMainPoint;
+        this.articleBody = articleBody;
+        this.dateWritten = dateWritten;
+        this.imageURL = imageURL;
+        this.tag = tag;
+    }
 
+    //getters and setters
     public String getImageURL() {
         return imageURL;
     }

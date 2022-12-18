@@ -11,15 +11,16 @@ import java.util.List;
 
 @Component
 public class JdbcArticleDao implements ArticleDao{
-
+    //instantiate jbdc template for use
     private JdbcTemplate jdbcTemplate;
 
+    //constructor
     public JdbcArticleDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
 
-    //get all articles
+    //method to get all articles
     @Override
     public List<Article> getAllArticles() {
         List<Article> results = new ArrayList<Article>();
@@ -32,7 +33,7 @@ public class JdbcArticleDao implements ArticleDao{
         }
         return results;
     }
-    //get an article by article ID
+    //Method to get an article by article ID
     @Override
     public Article getArticleByArticleId(int articleId) {
         Article result = new Article();
@@ -45,6 +46,7 @@ public class JdbcArticleDao implements ArticleDao{
 
         return result;
     }
+    //method to get article by name
     @Override
     public Article getArticleByArticleName(String articleName) {
         Article result = new Article();
@@ -57,7 +59,7 @@ public class JdbcArticleDao implements ArticleDao{
 
         return result;
     }
-
+    //method to get article by author
     @Override
     public Article getArticleByAuthorName(String authorName) {
         Article result = new Article();
@@ -70,6 +72,7 @@ public class JdbcArticleDao implements ArticleDao{
 
         return result;
     }
+    //method to get article by tag
     @Override
     public List<Article> getArticleByTag(String tag) {
         List<Article> result = new ArrayList<>();
@@ -82,7 +85,7 @@ public class JdbcArticleDao implements ArticleDao{
 
         return result;
     }
-
+    //method to add new article
     @Override
     public Article addArticle(Article article) {
         Article newArticle = new Article();
@@ -102,6 +105,7 @@ public class JdbcArticleDao implements ArticleDao{
         return newArticle;
     }
 
+    //method to get articles by date
     @Override
     public Article getArticleByDate(Date date) {
         Article result = new Article();
@@ -115,7 +119,7 @@ public class JdbcArticleDao implements ArticleDao{
         return result;
     }
 
-
+    //method to map each row to an article object
     private Article mapRowToArticle(SqlRowSet rowSet){
         Article result = new Article();
         result.setArticleBody(rowSet.getString("article_body"));

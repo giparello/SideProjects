@@ -7,7 +7,6 @@ import java.util.List;
 //interface makes classes injectable for dependency injection
 public interface ArticleDao {
     List<Article> getAllArticles();
-
     Article getArticleByArticleId(int articleId);
     public Article getArticleByArticleName(String articleName);
     public Article getArticleByAuthorName(String articleName);

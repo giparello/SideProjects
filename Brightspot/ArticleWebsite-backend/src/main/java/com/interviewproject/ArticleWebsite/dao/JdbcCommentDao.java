@@ -12,15 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-@CrossOrigin
 public class JdbcCommentDao implements CommentDao {
+    //instantiate jdbc template
     private JdbcTemplate jdbcTemplate;
-
+    //constructor
     public JdbcCommentDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-
+    //method to get all comments
     @Override
     public List<Comment> getAllComments() {
         List<Comment> comments = new ArrayList<>();
@@ -33,7 +33,7 @@ public class JdbcCommentDao implements CommentDao {
         }
         return comments;
     }
-
+    //method to get comments based on the articleID foreign key
     @Override
     public List<Comment> getCommentsByArticleId(int articleId) {
         List<Comment> comments = new ArrayList<>();
@@ -46,7 +46,7 @@ public class JdbcCommentDao implements CommentDao {
         }
         return comments;
     }
-
+    //method to add a new comment
     @Override
     public Comment addComment(Comment comment) {
         Comment newComment = new Comment();
@@ -65,7 +65,7 @@ public class JdbcCommentDao implements CommentDao {
         newComment.setCommentId(commentId);
         return newComment;
     }
-
+    //map each individual row to a comment object
     private Comment mapRowToComment(SqlRowSet rowSet){
         Comment result = new Comment();
         result.setCommentId(rowSet.getInt("comment_id"));
