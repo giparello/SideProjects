@@ -460,5 +460,8 @@ main #cards article {
   .article-text-input{
     width: 90%;
   }
+  .nav-links{
+    width: 90%;
+  }
 }
 </style>
